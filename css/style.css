@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cream: #F5F0E8;
+    --navy: #1B3A6B;
+    --white: #FFFFFF;
+    --font-main: 'Georgia', serif;
+}
+
+body{
+    background-color: var(--cream);
+    color: var(--navy);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    background-color: var(--white);
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-logo{
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+.logo-main{
+    font-size:  20px;
+    font-weight: bold;
+    color: var(--navy);
+    letter-spacing: 2px;
+}
+
+.logo-sub{
+    font-size: 11px;
+    color: var(--navy);
+}
+
+.navbar-links{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.navbar-links a{
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.navbar-links a:hover{
+    text-decoration: underline;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 12px;                   
+  font-size: 20px;
+  min-width: 80px;
+  justify-content: flex-end;
+}
+
+.icon-profile{
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.icon-cart{
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.navbar-icons a{
+    text-decoration: none;
+}
+
+.hero{
+    position: relative;
+    min-height: 600px;
+    width: 100%;
+    overflow: visible;
+    background-color: var(--cream);
+    margin-top: -20px;
+}
+
+.stall-img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(95vw, 1300px);
+    max-width: 1300px;
+    height: auto;
+
+    z-index: 1;
+}
+
+.hero-text{
+    position: absolute;
+    z-index: 2;
+
+    width: 340px;
+    left: 17%;
+    top: 22%;
+}
+
+.hero-text h1{
+    font-size: 46px;
+    font-weight: bold;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.hero-sub{
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.hero-desc{
+    font-size: 15px;
+    color: var(--navy);
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.btn-primary {
+  display: inline-block;       
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 30px;         
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn-primary:hover{
+    opacity: 0.85;
+}
+
+@media (max-width: 1200px){
+
+    .hero{
+        min-height: 500px;
+    }
+
+    .hero-text{
+        width: 260px;
+        padding-left: 40px;
+        padding-top: 120px;
+    }
+
+    .hero-text h1{
+        font-size: 32px;
+    }
+
+    .stall-img{
+        width: 110%;
+        left: 55%;
+    }
+}
+@media (max-width: 768px){
+
+    .hero{
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+
+    .hero-text{
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        padding: 50px 20px;
+    }
+
+    .stall-img{
+        width: 180%;
+        left: 50%;
+        top: 0;
+    }
+}
+
+/* Card */
+
+.hero-cards{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    gap: 20px;
+    left: 42%;
+    top: 50%;
+}
+
+.hero-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.card-img-placeholder{
+    width: 100px;
+    height: 140px;
+    background-color: #D9D9D9;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.card-name{
+    font-size: 12px;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.card-price{
+    font-size: 12px;
+    color: var(--navy);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-btn{
+    display: inline-block;
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 7px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.card-btn:hover{
+    opacity: 0.85;
+}
+
+/* ── Menu ── */
+.menu {
+  padding: 80px 48px;          /* breathing room top/bottom and sides */
+  margin-top: 60px;
+  background-color: var(--cream);
+}
+
+.menu-header {
+  display: flex;               /* title left, view all right */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;         /* gap below header before grid */
+}
+
+.menu-header h2 {
+  font-size: 28px;             /* section title size */
+  font-weight: bold;
+  color: var(--navy);
+}
+
+.view-all {
+  font-size: 14px;
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.menu-grid {
+  display: grid;               /* 4 cards side by side */
+  gap: 24px;                   /* space between cards */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card {
+  flex: 1;                     /* each card takes equal width */
+  display: flex;
+  flex-direction: column;      /* badge, image, name stacked vertically */
+  align-items: center;
+  position: relative;          /* needed for badge positioning */
+  cursor: pointer;
+}
+
+.badge {
+  background-color: var(--navy); /* navy pill */
+  color: var(--white);
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 20px;         /* pill shape */
+  margin-bottom: 12px;         /* gap below badge before image */
+  font-weight: bold;
+}
+
+.product-img-placeholder {
+  width: 100%;                 /* fills card width */
+  height: 200px;               /* tall enough to look like a product image */
+  background-color: #D9D9D9;   /* grey placeholder */
+  border-radius: 12px;         /* rounded corners */
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.product-name {
+  font-size: 14px;
+  color: var(--navy);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.product-card:hover .product-img-placeholder{
+    transform: scale(1.05);
+    border-radius: 12px;
+}
